@@ -2,3 +2,5 @@
 
 # MatrixInverse
 Simple Algebraic Methods and Python Code That Efficiently Implements Them to Inverse a Matrix
+
+Making some final changes to the code that should be ready tomorrow. :)
