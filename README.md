@@ -1,4 +1,4 @@
-![Matrix Inversion Logo](https://github.com/ThomIves/MatrixInversion/blob/master/Matrix_Inverse_Logo.png)
+![Matrix Inversion Logo](https://github.com/ThomIves/MatrixInverse/blob/master/Matrix_Inverse_Logo.png)
 
 # Matrix Inverse
 > A step by step explanation of how to inverse a matrix using a jupyter notebook and python scripts.
