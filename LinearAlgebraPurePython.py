@@ -3,7 +3,7 @@
 
 def check_squareness(A):
     if len(A) != len(A[0]):
-        print "Matrix must be square to inverse."
+        print("Matrix must be square to inverse.")
         sys.exit()
 
 def zeros_matrix(rows, cols):
@@ -58,7 +58,7 @@ def matrix_multiply(A,B):
     colsB = len(B[0])
 
     if colsA != rowsB:
-        print 'Number of A columns must equal number of B rows.'
+        print ('Number of A columns must equal number of B rows.')
         sys.exit()
 
     C = zeros_matrix(rowsA, colsB)
