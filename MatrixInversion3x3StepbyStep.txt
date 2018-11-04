@@ -1,0 +1,94 @@
+A and I are our starting matrices.
+
+A Matrix 				             I Matrix
+[' +5.000', ' +3.000', ' +1.000'] 	 [' +1.000', ' +0.000', ' +0.000']
+[' +3.000', ' +9.000', ' +4.000'] 	 [' +0.000', ' +1.000', ' +0.000']
+[' +1.000', ' +3.000', ' +5.000'] 	 [' +0.000', ' +0.000', ' +1.000']
+
+Since the matrices won't be the original A and I as we start row operations, 
+    the matrices will be called: AM for "A Morphing", and IM for "I Morphing" 
+    (no reference to Power Rangers intended).
+
+Using the matrices above, Scale row-1 of A and I by diagonal element 1 of A, which is +5.000.
+
+AM Matrix 				             IM Matrix
+[' +1.000', ' +0.600', ' +0.200'] 	 [' +0.200', ' +0.000', ' +0.000']
+[' +3.000', ' +9.000', ' +4.000'] 	 [' +0.000', ' +1.000', ' +0.000']
+[' +1.000', ' +3.000', ' +5.000'] 	 [' +0.000', ' +0.000', ' +1.000']
+
+Using the matrices above, subtract +3.000 * row-1 of A from row-2 of A, and 
+	subtract +3.000 * row-1 of I from row-2 of I
+
+AM Matrix 				             IM Matrix
+[' +1.000', ' +0.600', ' +0.200'] 	 [' +0.200', ' +0.000', ' +0.000']
+[' +0.000', ' +7.200', ' +3.400'] 	 [' -0.600', ' +1.000', ' +0.000']
+[' +1.000', ' +3.000', ' +5.000'] 	 [' +0.000', ' +0.000', ' +1.000']
+
+Using the matrices above, subtract +1.000 * row-1 of A from row-3 of A, and 
+	subtract +1.000 * row-1 of I from row-3 of I
+
+AM Matrix 				             IM Matrix
+[' +1.000', ' +0.600', ' +0.200'] 	 [' +0.200', ' +0.000', ' +0.000']
+[' +0.000', ' +7.200', ' +3.400'] 	 [' -0.600', ' +1.000', ' +0.000']
+[' +0.000', ' +2.400', ' +4.800'] 	 [' -0.200', ' +0.000', ' +1.000']
+
+
+Using the matrices above, Scale row-2 of A and I by diagonal element 2 of A, which is +7.200.
+
+AM Matrix 				             IM Matrix
+[' +1.000', ' +0.600', ' +0.200'] 	 [' +0.200', ' +0.000', ' +0.000']
+[' +0.000', ' +1.000', ' +0.472'] 	 [' -0.083', ' +0.139', ' +0.000']
+[' +0.000', ' +2.400', ' +4.800'] 	 [' -0.200', ' +0.000', ' +1.000']
+
+Using the matrices above, subtract +2.400 * row-2 of A from row-3 of A, and 
+	subtract +2.400 * row-2 of I from row-3 of I
+
+AM Matrix 				             IM Matrix
+[' +1.000', ' +0.600', ' +0.200'] 	 [' +0.200', ' +0.000', ' +0.000']
+[' +0.000', ' +1.000', ' +0.472'] 	 [' -0.083', ' +0.139', ' +0.000']
+[' +0.000', ' +0.000', ' +3.667'] 	 [' +0.000', ' -0.333', ' +1.000']
+
+
+Using the matrices above, Scale row-3 of A and I by diagonal element 3 of A, which is +3.667.
+
+AM Matrix 				             IM Matrix
+[' +1.000', ' +0.600', ' +0.200'] 	 [' +0.200', ' +0.000', ' +0.000']
+[' +0.000', ' +1.000', ' +0.472'] 	 [' -0.083', ' +0.139', ' +0.000']
+[' +0.000', ' +0.000', ' +1.000'] 	 [' +0.000', ' -0.091', ' +0.273']
+
+
+The lower triangle of AM is all 0's. Now, we'll do operations to make the upper triangle all 0's.
+
+
+Using the matrices above, subtract +0.472 * row-3 of A from row-2 of A, and 
+	subtract +0.472 * row-3 of I from row-2 of I
+
+AM Matrix 				             IM Matrix
+[' +1.000', ' +0.600', ' +0.200'] 	 [' +0.200', ' +0.000', ' +0.000']
+[' +0.000', ' +1.000', ' +0.000'] 	 [' -0.083', ' +0.182', ' -0.129']
+[' +0.000', ' +0.000', ' +1.000'] 	 [' +0.000', ' -0.091', ' +0.273']
+
+Using the matrices above, subtract +0.200 * row-3 of A from row-1 of A, and 
+	subtract +0.200 * row-3 of I from row-1 of I
+
+AM Matrix 				             IM Matrix
+[' +1.000', ' +0.600', ' +0.000'] 	 [' +0.200', ' +0.018', ' -0.055']
+[' +0.000', ' +1.000', ' +0.000'] 	 [' -0.083', ' +0.182', ' -0.129']
+[' +0.000', ' +0.000', ' +1.000'] 	 [' +0.000', ' -0.091', ' +0.273']
+
+Using the matrices above, subtract +0.600 * row-2 of A from row-1 of A, and 
+	subtract +0.600 * row-2 of I from row-1 of I
+
+AM Matrix 				             IM Matrix
+[' +1.000', ' +0.000', ' +0.000'] 	 [' +0.250', ' -0.091', ' +0.023']
+[' +0.000', ' +1.000', ' +0.000'] 	 [' -0.083', ' +0.182', ' -0.129']
+[' +0.000', ' +0.000', ' +1.000'] 	 [' +0.000', ' -0.091', ' +0.273']
+
+All operations complete. The IM matrix is now the inverse of A. Let's do a final check.
+
+Now we multiply the original A matrix times our inverse of A.
+If we get an identify matrix, our inversion is proved.
+
+[1.0, 0.0, 0.0]
+[0.0, 1.0, 0.0]
+[0.0, 0.0, 1.0]

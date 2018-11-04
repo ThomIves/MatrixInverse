@@ -3,16 +3,17 @@
 # Matrix Inverse
 > A step by step explanation of how to inverse a matrix using a jupyter notebook and python scripts.
 
-The Jupyter notebook walks thru a brute force procedural method for inverting a matrix with pure Python. Why wouldn’t we just use numpy? Great question. This work is about creating tools that add efficiency AND clarity. I love numpy, pandas, sklearn, and all the great tools that the python data science community brings to us, but I have learned that the better I understand the “innards” of a thing, the better I know how to apply it. Plus, tomorrows machine learning tools will be developed by those that understand the innards of the math and coding of today’s tools. 
+The Jupyter notebooks walks thru a brute force procedural method for inverting a matrix with pure Python. Why wouldn’t we just use numpy? Great question. This work is about creating tools that add efficiency AND clarity. I love numpy, pandas, sklearn, and all the great tools that the python data science community brings to us, but I have learned that the better I understand the “innards” of a thing, the better I know how to apply it. Plus, tomorrow's machine learning tools will be developed by those that understand the "innards" of the math and coding of today’s tools. 
 
 
 ## Getting started
 
 LinearAlgebraPurePython.py is a module file to be imported and have it's functions called.
 LinearAlgebraPractice.py is a simple python script that imports LinearAlgebraPurePython.py and uses it's functions.
-MatrixInversionStepbyStep.txt is a detailed step-by-step explanation of the procedure manually speaking.
-MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionStepbyStep.txt, because I was TOO LAZY
-    to have done all of MatrixInversionStepbyStep.txt by hand!
+MatrixInversion3x3StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 3x3 matrix.
+MatrixInversion5x5StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 5x5 matrix.
+MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionXxXStepbyStep.txt, because I was TOO LAZY
+    to have done all of the MatrixInversionXxXStepbyStep.txt work by hand!
 MatrixInversion.ipynb is a Jupyter notebook that walks you through the inversion programming steps.
 MatrixInversion.py is for those that do not use Jupyter notebooks.
 

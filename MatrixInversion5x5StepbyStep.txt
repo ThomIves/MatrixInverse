@@ -263,3 +263,11 @@ AM Matrix 						                             IM Matrix
 [' +0.000', ' +0.000', ' +0.000', ' +0.000', ' +1.000'] 	 [' -0.167', ' +0.200', ' +0.000', ' -0.000', ' +0.033']
 
 
+Now we multiply the original A matrix times our inverse of A.
+If we get an identify matrix, our inversion is proved.
+
+[1.0, 0.0, 0.0, 0.0, 0.0]
+[0.0, 1.0, 0.0, 0.0, 0.0]
+[0.0, 0.0, 1.0, 0.0, 0.0]
+[0.0, 0.0, 0.0, 1.0, 0.0]
+[0.0, 0.0, 0.0, 0.0, 1.0]
