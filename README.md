@@ -8,6 +8,7 @@ The Jupyter notebooks walks thru a brute force procedural method for inverting a
 
 ## Getting started
 
+0. DevelopmentNotebook.ipynb contains the brute force code used to explain the method on the YouTube video.
 1. MatrixInversion3x3StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 3x3 matrix.
 2. MatrixInversion5x5StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 5x5 matrix.
 3. MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionXxXStepbyStep.txt, because I was TOO LAZY to have done all of the MatrixInversionXxXStepbyStep.txt work by hand!
