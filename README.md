@@ -8,14 +8,15 @@ The Jupyter notebooks walks thru a brute force procedural method for inverting a
 
 ## Getting started
 
-0. DevelopmentNotebook.ipynb contains the brute force code used to explain the method on the YouTube video.
-1. MatrixInversion3x3StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 3x3 matrix.
-2. MatrixInversion5x5StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 5x5 matrix.
-3. MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionXxXStepbyStep.txt, because I was TOO LAZY to have done all of the MatrixInversionXxXStepbyStep.txt work by hand!
-4. MatrixInversion.ipynb is a Jupyter notebook that walks you through the inversion programming steps.
-5. MatrixInversion.py is for those that do not use Jupyter notebooks.
-6. Finally, LinearAlgebraPurePython.py is a module file to be imported and have it's functions called in basic linear algebra work.
-7. LinearAlgebraPractice.py is a simple python script that imports LinearAlgebraPurePython.py and uses it's functions.
+1. DevelopmentNotebook.ipynb contains the brute force code used to explain the method on the YouTube video.
+2. DevelopmentNotebook.py is a python script version of DevelopmentNotebook.ipynb for those that do not use Jupyter notebooks.
+3. MatrixInversion3x3StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 3x3 matrix.
+4. MatrixInversion5x5StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 5x5 matrix.
+5. MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionXxXStepbyStep.txt, because I was TOO LAZY to have done all of the MatrixInversionXxXStepbyStep.txt work by hand!
+6. MatrixInversion.ipynb is a Jupyter notebook that walks you through the inversion programming steps.
+7. MatrixInversion.py is for those that do not use Jupyter notebooks.
+8. Finally, LinearAlgebraPurePython.py is a module file to be imported and have it's functions called in basic linear algebra work.
+9. LinearAlgebraPractice.py is a simple python script that imports LinearAlgebraPurePython.py and uses it's functions.
 
 
 ## Deploying / Publishing
