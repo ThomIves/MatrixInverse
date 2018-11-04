@@ -8,14 +8,14 @@ The Jupyter notebooks walks thru a brute force procedural method for inverting a
 
 ## Getting started
 
-LinearAlgebraPurePython.py is a module file to be imported and have it's functions called.
-LinearAlgebraPractice.py is a simple python script that imports LinearAlgebraPurePython.py and uses it's functions.
-MatrixInversion3x3StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 3x3 matrix.
-MatrixInversion5x5StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 5x5 matrix.
-MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionXxXStepbyStep.txt, because I was TOO LAZY
-    to have done all of the MatrixInversionXxXStepbyStep.txt work by hand!
-MatrixInversion.ipynb is a Jupyter notebook that walks you through the inversion programming steps.
-MatrixInversion.py is for those that do not use Jupyter notebooks.
+1. MatrixInversion3x3StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 3x3 matrix.
+2. MatrixInversion5x5StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 5x5 matrix.
+3. MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionXxXStepbyStep.txt, because I was TOO LAZY to have done all of the MatrixInversionXxXStepbyStep.txt work by hand!
+4. MatrixInversion.ipynb is a Jupyter notebook that walks you through the inversion programming steps.
+5. MatrixInversion.py is for those that do not use Jupyter notebooks.
+6. Finally, LinearAlgebraPurePython.py is a module file to be imported and have it's functions called in basic linear algebra work.
+7. LinearAlgebraPractice.py is a simple python script that imports LinearAlgebraPurePython.py and uses it's functions.
+
 
 ## Deploying / Publishing
 
