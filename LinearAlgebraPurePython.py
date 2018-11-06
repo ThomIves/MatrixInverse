@@ -174,6 +174,7 @@ def inverse_matrix(A, tol=None):
 
         :return: The inverse of the matrix A
     """
+    
     check_squareness(A)
     check_non_singular(A)
 
