@@ -9,7 +9,7 @@ The Jupyter notebooks walks thru a brute force procedural method for inverting a
 ## Getting started
 
 1. DevelopmentNotebook.ipynb contains the brute force code used to illustrate the methods. DevelopmentNotebook.py is a python script version of DevelopmentNotebook.ipynb for those that do not use Jupyter notebooks.
-2. ODFDevNB.ipynb contains similar code to DevelopmentNotebook.ipynb put prints output in LibreOffice Math format to automate the illustrations of the matrix math.
+2. ODFDevNB.ipynb contains similar code to DevelopmentNotebook.ipynb but prints output in LibreOffice Math format to automate the illustrations of the matrix math.
 3. MatrixInversion3x3StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 3x3 matrix.
 4. MatrixInversion5x5StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 5x5 matrix.
 5. MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionXxXStepbyStep.txt, because I was TOO LAZY to have done all of the MatrixInversionXxXStepbyStep.txt work by hand!
