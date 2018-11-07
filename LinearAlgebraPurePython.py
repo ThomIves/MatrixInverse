@@ -174,39 +174,32 @@ def inverse_matrix(A, tol=None):
 
         :return: The inverse of the matrix A
     """
-    
+    # Section 1: Make sure A can be inverted.
     check_squareness(A)
     check_non_singular(A)
 
+    # Section 2: Make copies of A & I, AM & IM, to use for row operations
     n = len(A)
     AM = copy_matrix(A)
     I = identity_matrix(n)
     IM = copy_matrix(I)
 
-    # Make all diagonal elements 1 and make the lower triangular matrix all 0’s
-    for fd in range(n): # fd is for focus diagonal
-        for i in range(fd,n):
-            if i == fd:
-                scaler = 1.0 / AM[i][fd]
-            else:
-                scaler = AM[i][fd]
-            for j in range(n):
-                if i == fd:
-                    AM[i][j] *= scaler
-                    IM[i][j] *= scaler
-                else:
-                    AM[i][j] = AM[i][j] - scaler * AM[fd][j]
-                    IM[i][j] = IM[i][j] - scaler * IM[fd][j]
+    # Section 3: Perform row operations
+    indices = list(range(n)) # to allow flexible row referencing ***
+    for fd in range(n): # fd stands for focus diagonal
+        fdScaler = 1.0 / AM[fd][fd]
+        # FIRST: scale fd row with fd inverse. 
+        for j in range(n): # Use j to indicate column looping.
+            AM[fd][j] *= fdScaler
+            IM[fd][j] *= fdScaler
+        # SECOND: operate on all rows except fd row as follows:
+        for i in indices[0:fd] + indices[fd+1:]: # *** skip row with fd in it.
+            crScaler = AM[i][fd] # cr stands for "current row".
+            for j in range(n): # cr - crScaler * fdRow, but one element at a time.
+                AM[i][j] = AM[i][j] - crScaler * AM[fd][j]
+                IM[i][j] = IM[i][j] - crScaler * IM[fd][j]
 
-    # Make the upper triangular matrix all 0’s
-    for fd in range(n-1,0,-1):
-        for i in range(fd-1,-1,-1):
-            scaler = AM[i][fd]
-            for j in range(n):
-                AM[i][j] = AM[i][j] - scaler * AM[fd][j]
-                IM[i][j] = IM[i][j] - scaler * IM[fd][j]
-
-    # Make sure that IM is an inverse of A
+    # Section 4: Make sure that IM is an inverse of A within the specified tolerance
     if check_matrix_equality(I,matrix_multiply(A,IM),tol):
         return IM
     else:

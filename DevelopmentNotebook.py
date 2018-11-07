@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 def print_matrix(Title, M):
@@ -61,7 +61,7 @@ def matrix_multiply(A,B):
     return C
 
 
-# In[ ]:
+# In[2]:
 
 
 A = [[5.,3.,1.],[3.,9.,4.],[1.,3.,5.]]
@@ -72,7 +72,7 @@ Action = ''
 print_matrices(Action, 'A Matrix', A, 'I Matrix', I)
 
 
-# In[ ]:
+# In[3]:
 
 
 AM = copy_matrix(A)
@@ -87,131 +87,40 @@ print_matrices(exString, 'AM Matrix', AM, 'IM Matrix', IM)
 print()
 
 
-# In[ ]:
+# In[9]:
 
 
-diagonal = 0
-scaler = 1. / AM[diagonal][diagonal]
+# Run this cell then the next for fd = 0, 1, and 2 for a 3x3 matrix. 
+#      Then check for identity matrix in last cell.
 
-row = diagonal
-for column in range(len(AM[row])):
-    AM[row][column] = scaler * AM[row][column]
-    IM[row][column] = scaler * IM[row][column]
+fd = 2 # fd stands for focus diagonal OR the current diagonal
+fdScaler = 1. / AM[fd][fd]
+
+for j in range(n): # using j to indicate cycling thru columns
+    AM[fd][j] = fdScaler * AM[fd][j]
+    IM[fd][j] = fdScaler * IM[fd][j]
+    
+print()
+print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
+
+
+# In[10]:
+
+
+n = len(A)
+indices = list(range(n))
+
+for i in indices[0:fd] + indices[fd+1:]: # *** skip row with fd in it.
+    crScaler = AM[i][fd] # cr stands for "current row".
+    for j in range(n): # cr - crScaler * fdRow, but one element at a time.
+        AM[i][j] = AM[i][j] - crScaler * AM[fd][j]
+        IM[i][j] = IM[i][j] - crScaler * IM[fd][j]
     
 print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
 print()
 
 
-# In[ ]:
-
-
-row = 1
-scaler = AM[row][diagonal]
-for column in range(len(AM[row])):
-    AM[row][column] = AM[row][column] - scaler * AM[diagonal][column]
-    IM[row][column] = IM[row][column] - scaler * IM[diagonal][column]
-    
-print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
-print()
-
-
-# In[ ]:
-
-
-row = 2
-scaler = AM[row][diagonal]
-for column in range(len(AM[row])):
-    AM[row][column] = AM[row][column] - scaler * AM[diagonal][column]
-    IM[row][column] = IM[row][column] - scaler * IM[diagonal][column]
-    
-print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
-print()
-
-
-# In[ ]:
-
-
-diagonal = 1
-scaler = 1. / AM[diagonal][diagonal]
-
-row = diagonal
-for column in range(len(AM[row])):
-    AM[row][column] = scaler * AM[row][column]
-    IM[row][column] = scaler * IM[row][column]
-    
-print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
-print()
-
-
-# In[ ]:
-
-
-row = 2
-scaler = AM[row][diagonal]
-for column in range(len(AM[row])):
-    AM[row][column] = AM[row][column] - scaler * AM[diagonal][column]
-    IM[row][column] = IM[row][column] - scaler * IM[diagonal][column]
-    
-print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
-print()
-
-
-# In[ ]:
-
-
-diagonal = 2
-scaler = 1. / AM[diagonal][diagonal]
-
-row = diagonal
-for column in range(len(AM[row])):
-    AM[row][column] = scaler * AM[row][column]
-    IM[row][column] = scaler * IM[row][column]
-    
-print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
-print()
-
-
-# In[ ]:
-
-
-row = 1
-scaler = AM[row][diagonal]
-for column in range(len(AM[row])):
-    AM[row][column] = AM[row][column] - scaler * AM[diagonal][column]
-    IM[row][column] = IM[row][column] - scaler * IM[diagonal][column]
-    
-print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
-print()
-
-
-# In[ ]:
-
-
-row = 0
-scaler = AM[row][diagonal]
-for column in range(len(AM[row])):
-    AM[row][column] = AM[row][column] - scaler * AM[diagonal][column]
-    IM[row][column] = IM[row][column] - scaler * IM[diagonal][column]
-    
-print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
-print()
-
-
-# In[ ]:
-
-
-diagonal = 1
-row = 0
-scaler = AM[row][diagonal]
-for column in range(len(AM[row])):
-    AM[row][column] = AM[row][column] - scaler * AM[diagonal][column]
-    IM[row][column] = IM[row][column] - scaler * IM[diagonal][column]
-    
-print_matrices('', 'AM Matrix', AM, 'IM Matrix', IM)
-print()
-
-
-# In[ ]:
+# In[11]:
 
 
 print_matrix('Identity Matrix from A * Ainv', matrix_multiply(A,IM))
