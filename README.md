@@ -8,15 +8,15 @@ The Jupyter notebooks walks thru a brute force procedural method for inverting a
 
 ## Getting started
 
-1. DevelopmentNotebook.ipynb contains the brute force code used to illustrate the methods. DevelopmentNotebook.py is a python script version of DevelopmentNotebook.ipynb for those that do not use Jupyter notebooks.
-2. ODFDevNB.ipynb contains similar code to DevelopmentNotebook.ipynb but prints output in LibreOffice Math format to automate the illustrations of the matrix math.
+1. DevelopmentNotebook.ipynb contains the brute force code used to illustrate the methods. 
+   DevelopmentNotebook.py is a python script version of DevelopmentNotebook.ipynb for those that do not use Jupyter notebooks.
+2. ODFDevNB.ipynb contains similar code to DevelopmentNotebook.ipynb but prints output in LibreOffice Math format to automate the illustrations of the matrix math. It also had a corresponding .py file.
 3. MatrixInversion3x3StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 3x3 matrix.
 4. MatrixInversion5x5StepbyStep.txt is a detailed step-by-step explanation of the procedure, manually speaking, on a 5x5 matrix.
-5. MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionXxXStepbyStep.txt, because I was TOO LAZY to have done all of the MatrixInversionXxXStepbyStep.txt work by hand!
-6. MatrixInversion.ipynb is a Jupyter notebook that walks you through the inversion programming steps.
-7. MatrixInversion.py is for those that do not use Jupyter notebooks.
-8. Finally, LinearAlgebraPurePython.py is a module file to be imported and have it's functions called in basic linear algebra work.
-9. LinearAlgebraPractice.py is a simple python script that imports LinearAlgebraPurePython.py and uses it's functions.
+5. MatrixInverseStepByStep.ipynb is the programming used to create MatrixInversionXxXStepbyStep.txt, because I was TOO LAZY to have done all of the MatrixInversionXxXStepbyStep.txt work by hand! It has a corresponding .py file.
+6. MatrixInversion.ipynb is a Jupyter notebook that walks you through the inversion programming steps. There is a corresponding .py version.
+7. LinearAlgebraPurePython.py is a module file to be imported and have it's functions called in basic linear algebra work.
+8. LinearAlgebraPractice.py is a simple python script that imports LinearAlgebraPurePython.py and uses it's functions.
 
 
 ## Deploying / Publishing
