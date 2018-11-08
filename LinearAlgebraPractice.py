@@ -1,4 +1,5 @@
 import LinearAlgebraPurePython as la 
+# import Short_Implementation as si
 
 
 print('A matrix')
@@ -7,7 +8,10 @@ la.print_matrix(A)
 print()
 
 print('A Inverse')
-Inv = la.inverse_matrix(A, 9)
+# AM = la.copy_matrix(A) 
+# IM = la.identity_matrix(len(A))
+# Inv = si.invert_matrix(AM, IM)
+Inv = la.invert_matrix(A,9)
 la.print_matrix(Inv)
 print()
 

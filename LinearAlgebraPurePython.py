@@ -167,7 +167,7 @@ def check_matrix_equality(A,B, tol=None):
 
     return True
 
-def inverse_matrix(A, tol=None):
+def invert_matrix(A, tol=None):
     """
     Returns the inverse of the passed in matrix.
         :param A: The matrix to be inversed
