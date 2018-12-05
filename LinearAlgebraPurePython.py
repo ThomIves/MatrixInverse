@@ -9,40 +9,35 @@ def check_squareness(A):
     if len(A) != len(A[0]):
         raise ArithmeticError("Matrix must be square to inverse.")
 
-def check_non_singular(A):
-    """
-    Checks that matrix is not singular by checking 
-    for a non-singular determinant.
-        :param A: The matrix to check
-
-        :return: The determinant 
-                (any non-zero determinant will serve as a True)
-    """
-    AC = copy_matrix(A)
-    for row in range(len(AC)):
-        AC[row] = AC[row] + AC[row][:-1]
+def determinant(A, total=0):
+    indices = list(range(len(A)))
     
-    down = 0
-    up = 0
-    for diag in range(len(A[0])):
-        this_down = 1.0
-        for element in range(len(A[0])):
-            this_down *= AC[element][element + diag]
-        down += this_down
+    if len(A) == 2 and len(A[0]) == 2:
+        val = A[0][0] * A[1][1] - A[1][0] * A[0][1]
+        return val
 
-        this_up = 1.0
-        for element in range(len(A[0])):
-            reverse_element = len(A) - 1 - element
-            this_up *= AC[reverse_element][element + diag]
-        up += this_up
+    for fc in indices:
+        As = copy_matrix(A)
+        As = As[1:]
+        height = len(As)
+        builder = 0
 
-    determinant = down - up
+        for i in range(height):
+            As[i] = As[i][0:fc] + As[i][fc+1:]
 
-    if determinant != 0:
-        return determinant
+        sign = (-1) ** (fc % 2)
+        sub_det = determinant(As)
+        total += A[0][fc] * sign * sub_det
+
+    return total
+
+def check_non_singular(A):
+    det = determinant(A)
+    if det != 0:
+        return det
     else:
         raise ArithmeticError("Singular Matrix!")
-
+        
 def zeros_matrix(rows, cols):
     """
     Creates a matrix filled with zeros.
