@@ -31,16 +31,18 @@
 def print_matrix(Title, M):
     print(Title)
     for row in M:
-        print([round(x,3)+0 for x in row])
-        
+        print([round(x, 3)+0 for x in row])
+
+
 def print_matrices(Action, Title1, M1, Title2, M2):
     print(Action)
     print(Title1, '\t'*int(len(M1)/2)+"\t"*len(M1), Title2)
     for i in range(len(M1)):
         row1 = ['{0:+7.3f}'.format(x) for x in M1[i]]
         row2 = ['{0:+7.3f}'.format(x) for x in M2[i]]
-        print(row1,'\t', row2)
-        
+        print(row1, '\t', row2)
+
+
 def zeros_matrix(rows, cols):
     A = []
     for i in range(rows):
@@ -49,6 +51,7 @@ def zeros_matrix(rows, cols):
             A[-1].append(0.0)
 
     return A
+
 
 def copy_matrix(M):
     rows = len(M)
@@ -62,7 +65,8 @@ def copy_matrix(M):
 
     return MC
 
-def matrix_multiply(A,B):
+
+def matrix_multiply(A, B):
     rowsA = len(A)
     colsA = len(A[0])
 
@@ -85,8 +89,9 @@ def matrix_multiply(A,B):
     return C
 
 
-# **NOTE:** The last print statement uses a trick to get rid of -0.0’s. Try it with and without the “+0” to see what I mean.
-# 
+# **NOTE:** The last print statement uses a trick to get rid of -0.0’s.
+# Try it with and without the “+0” to see what I mean.
+#
 # Let’s prepare some matrices to use.
 
 # In[2]:
