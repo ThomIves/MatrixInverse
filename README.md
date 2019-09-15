@@ -29,7 +29,7 @@ I am open to share the development and improvements of this with others, but it 
 
 ## Links
 
-This work came from ![My GitHub Repo](https://github.com/ThomIves/MatrixInverse) originally.
+This work came from [My GitHub Repo](https://github.com/ThomIves/MatrixInverse) originally.
 
 ## Licensing
 
